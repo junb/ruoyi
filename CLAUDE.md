@@ -164,3 +164,10 @@ plus-ui/src/
 - 多租户表使用 `tenant_id` 字段，非租户表在 `tenant.excludes` 配置中列出。
 - 默认数据库名 `ry-vue`，MySQL 默认账号 root/root，Redis 默认密码 `ruoyi123`。
 - 版本升级 SQL 在 `script/sql/update/` 目录下。
+
+## Active Technologies
+- Java 17（Spring Boot 3.5.12）+ TypeScript ~5.9.3（Vue 3.5.30） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, Redisson 3.52.0, SnailJob 1.9.0, Hutool HTTP, Element Plus 2.13.5 (001-auto-inspection)
+- MySQL（`ry-vue`）+ Redis（Spring Cache/Redisson） (001-auto-inspection)
+
+## Recent Changes
+- 001-auto-inspection: Added Java 17（Spring Boot 3.5.12）+ TypeScript ~5.9.3（Vue 3.5.30） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, Redisson 3.52.0, SnailJob 1.9.0, Hutool HTTP, Element Plus 2.13.5

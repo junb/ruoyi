@@ -1,0 +1,3 @@
+org.dromara.inspection.domain.vo.InspectionReportVo
+org.dromara.inspection.domain.vo.InspectionReportDetailVo
+org.dromara.inspection.domain.vo.InspectionInstanceMetricVo

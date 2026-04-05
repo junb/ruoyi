@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash .specify/scripts/bash/update-agent-context.sh claude)",
+      "Bash(bash:*)",
+      "Bash(find /Users/jun/IdeaProjects/ruoyi/plus-ui/src/views -name \"*.vue\" -exec grep -l \"vxe-table\\\\|VxeTable\" {} \\\\;)",
+      "Bash(find /Users/jun/IdeaProjects/ruoyi/plus-ui/src/views -name \"*.vue\" -exec grep -l \"vxe-table\" {} \\\\;)",
+      "Bash(/Users/jun/Documents/tools/maven/apache-maven-3.9.14/bin/mvn compile:*)",
+      "Bash(/Users/jun/Documents/tools/maven/apache-maven-3.9.14/bin/mvn clean:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(lsof -ti:80)",
+      "Bash(xargs kill:*)"
+    ]
+  }
+}
