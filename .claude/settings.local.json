@@ -25,7 +25,9 @@
       "Bash(npx eslint:*)",
       "Bash(mvn compile:*)",
       "Bash(/opt/maven/bin/mvn compile:*)",
-      "Bash(\"/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/bin/mvn\" compile -pl ruoyi-modules/ruoyi-inspection -am -q -f /Users/jun/IdeaProjects/ruoyi/RuoYi-Vue-Plus/pom.xml)"
+      "Bash(\"/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/bin/mvn\" compile -pl ruoyi-modules/ruoyi-inspection -am -q -f /Users/jun/IdeaProjects/ruoyi/RuoYi-Vue-Plus/pom.xml)",
+      "Bash(sips:*)",
+      "Bash(curl -L -o /Users/jun/IdeaProjects/ruoyi/plus-ui/src/assets/images/login-background.jpg \"https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80\")"
     ]
   }
 }
