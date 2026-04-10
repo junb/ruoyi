@@ -43,7 +43,6 @@ org.dromara.system.domain.vo.SysTenantPackageVoToSysTenantPackageMapper
 org.dromara.system.domain.bo.SysTenantBoToSysTenantMapper
 org.dromara.system.domain.bo.SysTenantPackageBoToSysTenantPackageMapper
 org.dromara.system.domain.SysLogininforToSysLogininforVoMapper
-org.dromara.web.domain.vo.TenantListVoToSysTenantVoMapper
 org.dromara.system.domain.vo.SysPostVoToSysPostMapper
 org.dromara.system.domain.SysSocialToSysSocialVoMapper
 org.dromara.system.domain.bo.SysDictTypeBoToSysDictTypeMapper

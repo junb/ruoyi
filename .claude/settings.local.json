@@ -10,7 +10,22 @@
       "Bash(npm install:*)",
       "Bash(npm run:*)",
       "Bash(lsof -ti:80)",
-      "Bash(xargs kill:*)"
+      "Bash(xargs kill:*)",
+      "Bash(.specify/scripts/bash/create-new-feature.sh \"增加一个功能接口，将altermanager和loki的告警转发推送到飞书，同时将告警记录下来\" --json --short-name \"alert-feishu-forward\")",
+      "Bash(.specify/scripts/bash/check-prerequisites.sh:*)",
+      "Bash(.specify/scripts/bash/setup-plan.sh:*)",
+      "WebSearch",
+      "mcp__web-search-prime__web_search_prime",
+      "mcp__web-reader__webReader",
+      "mcp__zread__search_doc",
+      "mcp__zread__read_file",
+      "Bash(mvn clean:*)",
+      "Read(//usr/local/bin/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(npx eslint:*)",
+      "Bash(mvn compile:*)",
+      "Bash(/opt/maven/bin/mvn compile:*)",
+      "Bash(\"/Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/bin/mvn\" compile -pl ruoyi-modules/ruoyi-inspection -am -q -f /Users/jun/IdeaProjects/ruoyi/RuoYi-Vue-Plus/pom.xml)"
     ]
   }
 }

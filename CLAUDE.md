@@ -168,6 +168,8 @@ plus-ui/src/
 ## Active Technologies
 - Java 17（Spring Boot 3.5.12）+ TypeScript ~5.9.3（Vue 3.5.30） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, Redisson 3.52.0, SnailJob 1.9.0, Hutool HTTP, Element Plus 2.13.5 (001-auto-inspection)
 - MySQL（`ry-vue`）+ Redis（Spring Cache/Redisson） (001-auto-inspection)
+- Java 17（Spring Boot 3.5.12） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, Hutool HTTP, Jackson, Spring Async (002-alert-feishu-forward)
+- MySQL（`ry-vue` 库），Redis（Spring Cache/Redisson） (002-alert-feishu-forward)
 
 ## Recent Changes
 - 001-auto-inspection: Added Java 17（Spring Boot 3.5.12）+ TypeScript ~5.9.3（Vue 3.5.30） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, Redisson 3.52.0, SnailJob 1.9.0, Hutool HTTP, Element Plus 2.13.5
