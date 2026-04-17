@@ -137,6 +137,13 @@
 - 提交信息使用中文，格式：`模块名: 简要描述`。
 - 示例：`系统管理: 新增用户导出功能`、`代码生成: 修复模板空指针问题`。
 
+### 构建环境（强制）
+
+- **JDK**：Azul Zulu 17.0.15（路径：`/Users/jun/Library/Java/JavaVirtualMachines/azul-17.0.15/Contents/Home`），禁止使用 JDK 21 编译。
+- **Maven**：Apache Maven 3.9.14（路径：`/Users/jun/Documents/tools/maven/apache-maven-3.9.14`）。
+- **打包方式**：必须通过终端使用上述 Maven CLI 执行 `mvn clean package`，禁止依赖 IntelliJ IDEA 内部 Maven 构建生产 JAR。
+- **原因**：IntelliJ 的 Eclipse JDT 编译器会生成损坏的 class 文件（`super_class` 被解析为 `Object` 而非实际父类），导致运行时 `ClassNotFoundException` 和方法找不到错误。打包前应关闭 IntelliJ 或禁用其自动构建。
+
 ### 环境与配置
 
 - Maven Profile：`local`（本地）、`dev`（开发，默认）、`prod`（生产）。
