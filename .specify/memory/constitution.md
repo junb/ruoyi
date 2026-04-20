@@ -41,6 +41,7 @@
 
 - 非租户表必须在 `application.yml` 的 `tenant.excludes` 中显式声明。
 - 实体类继承体系：`BaseEntity` → `TenantEntity`，新增业务实体必须继承 `TenantEntity`。
+- **建表字段对齐**：继承 `TenantEntity` 的实体对应的数据表必须包含其全部字段：`tenant_id`、`create_dept`、`create_by`、`create_time`、`update_by`、`update_time`、`del_flag`（含 `@TableLogic` 逻辑删除）。遗漏任何字段将导致 MyBatis-Plus 生成 SQL 时报 `Unknown column` 错误。
 - 租户隔离由 MyBatis-Plus 租户插件自动处理，禁止在业务代码中手动拼接租户条件。
 
 **原因**：多租户是本项目的核心架构特性，数据隔离是安全性底线。
@@ -141,8 +142,9 @@
 
 - **JDK**：Azul Zulu 17.0.15（路径：`/Users/jun/Library/Java/JavaVirtualMachines/azul-17.0.15/Contents/Home`），禁止使用 JDK 21 编译。
 - **Maven**：Apache Maven 3.9.14（路径：`/Users/jun/Documents/tools/maven/apache-maven-3.9.14`）。
-- **打包方式**：必须通过终端使用上述 Maven CLI 执行 `mvn clean package`，禁止依赖 IntelliJ IDEA 内部 Maven 构建生产 JAR。
-- **原因**：IntelliJ 的 Eclipse JDT 编译器会生成损坏的 class 文件（`super_class` 被解析为 `Object` 而非实际父类），导致运行时 `ClassNotFoundException` 和方法找不到错误。打包前应关闭 IntelliJ 或禁用其自动构建。
+- **打包方式**：必须通过终端使用上述 Maven CLI 执行 `mvn clean package -P dev -pl ruoyi-admin -am -q`，禁止依赖 IntelliJ IDEA 内部 Maven 构建生产 JAR。
+- **启动方式**：必须使用 `java -jar ruoyi-admin/target/ruoyi-admin.jar` 启动，禁止通过 IDE 直接运行或使用 `mvn spring-boot:run`。IDE 会持续污染 `target` 目录导致 class 文件损坏。
+- **原因**：IntelliJ 的 Eclipse JDT 编译器会生成损坏的 class 文件（`super_class` 被解析为 `Object` 而非实际父类），导致运行时 `ClassNotFoundException` 和方法找不到错误。即使打包后，IDE 的自动构建也会覆盖 target 中的 class 文件。
 
 ### 环境与配置
 
@@ -159,4 +161,4 @@
 - **合规检查**：所有代码审查必须验证是否符合本文件规定的原则。使用 `CLAUDE.md` 作为运行时开发指导文件。
 - **复杂度豁免**：如需违反某项原则，必须在实现计划的 Complexity Tracking 表中记录：违反项、必要性、被否决的更简方案及理由。
 
-**Version**: 1.0.0 | **Ratified**: 2026-04-05 | **Last Amended**: 2026-04-05
+**Version**: 1.2.0 | **Ratified**: 2026-04-05 | **Last Amended**: 2026-04-19

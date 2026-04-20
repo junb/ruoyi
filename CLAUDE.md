@@ -25,13 +25,16 @@ RuoYi-Vue-Plus v5.6.0 — Dromara 组织出品的多租户企业级管理系统�
 # 设置环境变量
 export JAVA_HOME=/Users/jun/Library/Java/JavaVirtualMachines/azul-17.0.15/Contents/Home
 MVN=/Users/jun/Documents/tools/maven/apache-maven-3.9.14/bin/mvn
+cd RuoYi-Vue-Plus
+
+# 打包（开发环境）— 必须用 Maven CLI，禁止用 IntelliJ 内部 Maven
+$MVN clean package -P dev -pl ruoyi-admin -am -q
+
+# 启动 — 必须用 java -jar，禁止通过 IDE 直接运行（IDE 会污染 target）
+java -jar ruoyi-admin/target/ruoyi-admin.jar
 
 # 打包（生产环境）
-cd RuoYi-Vue-Plus
 $MVN clean package -P prod -pl ruoyi-admin -am
-
-# 打包（开发环境）
-$MVN clean package -P dev -pl ruoyi-admin -am
 
 # 运行测试（默认跳过，skipTests=true）
 $MVN test -DskipTests=false
@@ -39,12 +42,11 @@ $MVN test -DskipTests=false
 # 运行单个测试类
 $MVN test -DskipTests=false -pl ruoyi-modules/ruoyi-system -Dtest=SomeTestClass
 
-# 启动应用（入口类：org.dromara.DromaraApplication）
-$MVN spring-boot:run -pl ruoyi-admin -P dev
-
 # 生产部署
 java -jar ruoyi-admin/target/ruoyi-admin.jar
 ```
+
+**启动顺序**：先 `clean package`，再 `java -jar`。禁止 `mvn spring-boot:run`（也会受 IDE 污染影响）。
 
 环境 Profile：`local`、`dev`（默认）、`prod`。通过 Maven 资源过滤注入到 `application.yml`。
 
@@ -184,6 +186,8 @@ plus-ui/src/
 - Java 17（Spring Boot 3.5.12） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, Hutool HTTP, Jackson, Spring Async (002-alert-feishu-forward)
 - MySQL（`ry-vue` 库），Redis（Spring Cache/Redisson） (002-alert-feishu-forward)
 - Java 17（Spring Boot 3.5.12）+ TypeScript ~5.9.3（Vue 3.5.30） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, ECharts 6.0.0（已引入）, SnailJob (003-disk-prediction)
+- Java 17（Spring Boot 3.5.12）+ TypeScript ~5.9.3（Vue 3.5.30） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, DashScope SDK 2.22.13, Apache Tika 2.9.2, Chroma Java Client 0.2.0, Element Plus 2.13.5 (005-knowledge-assistant)
+- MySQL（文档元数据/会话/消息）, Chroma Server（向量存储）, OSS（原始文件） (005-knowledge-assistant)
 
 ## Recent Changes
 - 001-auto-inspection: Added Java 17（Spring Boot 3.5.12）+ TypeScript ~5.9.3（Vue 3.5.30） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, Redisson 3.52.0, SnailJob 1.9.0, Hutool HTTP, Element Plus 2.13.5
