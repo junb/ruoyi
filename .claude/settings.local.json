@@ -87,7 +87,12 @@
       "Bash(docker exec:*)",
       "Bash(/Users/jun/Documents/tools/maven/apache-maven-3.9.14/bin/mvn dependency:tree -pl ruoyi-modules/ruoyi-knowledge -f /Users/jun/IdeaProjects/ruoyi/RuoYi-Vue-Plus/pom.xml)",
       "mcp__zai-mcp-server__extract_text_from_screenshot",
-      "Bash(python3 -m json.tool)"
+      "Bash(python3 -m json.tool)",
+      "Bash(echo \"Backend PID: $!\")",
+      "Bash(echo \"Frontend PID: $!\")",
+      "Bash(lsof -iTCP -sTCP:LISTEN -P)",
+      "Bash(kill 27210)",
+      "Bash(kill 27776)"
     ]
   }
 }

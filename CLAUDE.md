@@ -188,6 +188,8 @@ plus-ui/src/
 - Java 17（Spring Boot 3.5.12）+ TypeScript ~5.9.3（Vue 3.5.30） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, ECharts 6.0.0（已引入）, SnailJob (003-disk-prediction)
 - Java 17（Spring Boot 3.5.12）+ TypeScript ~5.9.3（Vue 3.5.30） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, DashScope SDK 2.22.13, Apache Tika 2.9.2, Chroma Java Client 0.2.0, Element Plus 2.13.5 (005-knowledge-assistant)
 - MySQL（文档元数据/会话/消息）, Chroma Server（向量存储）, OSS（原始文件） (005-knowledge-assistant)
+- TypeScript ~5.9.3 + Vue 3.5.30, Element Plus 2.13.5, UnoCSS, SCSS (006-dark-tech-ui)
+- N/A（纯样式改造） (006-dark-tech-ui)
 
 ## Recent Changes
 - 001-auto-inspection: Added Java 17（Spring Boot 3.5.12）+ TypeScript ~5.9.3（Vue 3.5.30） + MyBatis-Plus 3.5.16, Sa-Token 1.44.0, Redisson 3.52.0, SnailJob 1.9.0, Hutool HTTP, Element Plus 2.13.5
